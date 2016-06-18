@@ -9,7 +9,7 @@ mail_host = 'smtp.163.com'
 mail_sufix = '163.com'
 def sendMessage(sub,content):
     me = 'hello'+'<'+user+'@'+mail_sufix+'>'
-    msg = MIMEText(content,_subtype='plain',_charset='utf-8')
+    msg = MIMEText(content,_subtype='html',_charset='utf-8')
     msg['Subject'] = me
     msg['from'] = user
     msg['to'] = ';'.join(mail_to)
